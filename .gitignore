@@ -1,0 +1,81 @@
+# ---------------------------------------------------------------------------
+# Dependencies
+# ---------------------------------------------------------------------------
+node_modules/
+.pnpm-store/
+.pnpm-debug.log*
+
+# ---------------------------------------------------------------------------
+# Build output
+# ---------------------------------------------------------------------------
+dist/
+build/
+.vite/
+*.tsbuildinfo
+
+# ---------------------------------------------------------------------------
+# Environment and secrets
+#
+# The browser sends the API key per request from localStorage, and the CLI
+# accepts PARTICLE_API_KEY rather than a committed file. These are ignored so a
+# local .env can never be committed by accident.
+# ---------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets.json
+
+# ---------------------------------------------------------------------------
+# Logs and caches
+# ---------------------------------------------------------------------------
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs/
+.cache/
+.eslintcache
+.turbo/
+
+# ---------------------------------------------------------------------------
+# Test and coverage output
+# ---------------------------------------------------------------------------
+coverage/
+.nyc_output/
+playwright-report/
+test-results/
+
+# ---------------------------------------------------------------------------
+# Editors and IDEs
+# ---------------------------------------------------------------------------
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+*.swp
+*.swo
+*~
+
+# ---------------------------------------------------------------------------
+# Operating system
+# ---------------------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+desktop.ini
+
+# ---------------------------------------------------------------------------
+# Deliberately NOT ignored
+#
+# data/runs/*.jsonl are committed on purpose. They are the audit trail behind
+# VERIFICATION.md — one line per graded model call, carrying the raw answer,
+# the stored answer and the verdict. Ignoring them would make the published
+# curve unverifiable. Only scratch files are excluded below.
+# ---------------------------------------------------------------------------
+data/runs/*.tmp
+data/runs/*.partial

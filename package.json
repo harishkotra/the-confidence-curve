@@ -1,0 +1,23 @@
+{
+  "name": "the-confidence-curve",
+  "private": true,
+  "version": "1.0.0",
+  "description": "When is the extra thinking worth it? A 3D surface of accuracy vs difficulty vs reasoning tokens across two models.",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -n server,web -c magenta,cyan \"pnpm -F server dev\" \"pnpm -F web dev\"",
+    "dev:server": "pnpm -F server dev",
+    "dev:web": "pnpm -F web dev",
+    "build": "pnpm -F web build",
+    "typecheck": "pnpm -F server typecheck && pnpm -F web typecheck",
+    "sweep": "pnpm -F server sweep",
+    "verify": "pnpm -F server verify"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild"]
+  },
+  "packageManager": "pnpm@11.7.0"
+}
