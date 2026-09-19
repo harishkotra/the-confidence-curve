@@ -15,6 +15,8 @@ This app answers it with a measurement, not an opinion.
 
 </div>
 
+<img width="1836" height="1165" alt="Screenshot at Sep 19 15-24-38" src="https://github.com/user-attachments/assets/769c9781-ffc7-4a0f-b913-1403dc686df3" />
+
 ---
 
 ## What this is
